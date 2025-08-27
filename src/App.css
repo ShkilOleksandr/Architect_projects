@@ -3,8 +3,9 @@
   height: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;;
-  background-image: url(https://lh3.googleusercontent.com/p/AF1QipMvB4qv5_KmieAh8aqqD8dKcrcv8poF8bhcE2R5=s1360-w1360-h1020-rw);
+  text-align: center;
+  background: #da44eb;
+background: linear-gradient(90deg, rgba(218, 68, 235, 1) 0%, rgba(87, 190, 199, 1) 50%, rgba(2, 98, 232, 1) 100%);
 }
 
 .logo {
