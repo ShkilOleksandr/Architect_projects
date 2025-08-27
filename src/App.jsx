@@ -8,6 +8,9 @@ import Info from './components/Info'
 import Header from './components/Header';
 import NavBar from './components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { MasonryGrid } from "./components/MasonryGrid";
+import { ProjectTile } from "./components/ProjectTile";
+import { projects } from "./lib/data";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +27,12 @@ function App() {
     <Router>
     <div className="App">
       <NavBar />
+      
+      <MasonryGrid>
+        {projects.map((p) => (
+          <ProjectTile key={p.id} project={p} />
+        ))}
+      </MasonryGrid>
       <About AboutTitle={t('AboutTitle')} AboutText={t('AboutText')} />
       <Info />
      <h1>
