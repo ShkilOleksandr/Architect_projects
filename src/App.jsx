@@ -6,6 +6,8 @@ import './App.css'
 import  About  from './components/About';
 import Info from './components/Info'
 import Header from './components/Header';
+import NavBar from './components/Navbar';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,10 +21,9 @@ function App() {
     changeLanguage(newLanguage);
   };
   return (
-    
+    <Router>
     <div className="App">
-      <Header HeaderText={t('HeaderText')} />
-      
+      <NavBar />
       <About AboutTitle={t('AboutTitle')} AboutText={t('AboutText')} />
       <Info />
      <h1>
@@ -39,6 +40,7 @@ function App() {
       Change Language
      </button>
    </div>
+   </Router>
   )
 }
 
