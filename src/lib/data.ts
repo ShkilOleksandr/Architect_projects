@@ -24,3 +24,4 @@ export const projects: Project[] = [
     href: "https://plus.unsplash.com/premium_photo-1672423154405-5fd922c11af2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D",
   },
 ];
+export const getProjectById = (id) => projects.find(p => p.id === id);

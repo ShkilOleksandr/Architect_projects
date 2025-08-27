@@ -1,6 +1,7 @@
 // ProjectTile.tsx
 import React from "react";
 import { Project } from "../lib/types";
+import { Link } from "react-router-dom";
 
 export const ProjectTile: React.FC<{ project: Project }> = ({ project }) => {
   const content = (
@@ -46,17 +47,9 @@ export const ProjectTile: React.FC<{ project: Project }> = ({ project }) => {
   );
 
   // If there is a link, wrap the tile in <a>; otherwise just render the figure
-  return project.href ? (
-    <a
-      href={project.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ textDecoration: "none" }}
-      aria-label={project.name}
-    >
-      {content}
-    </a>
-  ) : (
-    content
-  );
+  return (
+  <Link to={`/projects/${project.id}`} aria-label={project.name} style={{ textDecoration: "none", display: "block" }}>
+    {content}
+  </Link>
+);
 };
